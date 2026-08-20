@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>KPM — 미국진출 A to Z</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Gothic+A1:wght@400;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#EDEBE6;--ink:#0C0C0B;--red:#FF3B14}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);overflow-x:hidden;
+  font-family:"Gothic A1",-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo",sans-serif;-webkit-font-smoothing:antialiased}
+section{position:relative;overflow:hidden;min-height:100svh;display:flex;flex-direction:column;padding:44px 0 0}
+.s2{background:var(--ink);color:var(--paper)}
+.grain{position:absolute;inset:0;pointer-events:none;z-index:5;opacity:.05;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E")}
+.in{max-width:1440px;margin:0 auto;padding:0 44px;width:100%;position:relative;z-index:2;
+  flex:1;display:flex;flex-direction:column;justify-content:center}
+.top{flex:none;display:flex;justify-content:space-between;align-items:center;
+  font-family:Archivo,sans-serif;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+  border-bottom:2px solid var(--ink);padding-bottom:12px}
+.s2 .top{border-color:var(--paper)}
+.top em{font-style:normal;background:var(--red);color:#fff;padding:5px 11px}
+.ident{flex:none;display:flex;align-items:baseline;gap:13px;padding:16px 0 0;flex-wrap:wrap}
+.ident b{font-family:Archivo,sans-serif;font-size:21px;font-weight:800;letter-spacing:.24em}
+.ident span{font-size:12.5px;font-weight:600;letter-spacing:-.015em;opacity:.62}
+.row{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:end;margin-top:30px}
+h1{font-family:Archivo,sans-serif;font-weight:800;font-size:clamp(46px,10.6vw,158px);
+  line-height:.86;letter-spacing:-.055em;text-transform:uppercase}
+h1 u{text-decoration:none;color:var(--red)}
+.note{font-family:Archivo,sans-serif;font-size:11.5px;font-weight:600;letter-spacing:.06em;
+  text-align:right;line-height:2;text-transform:uppercase;opacity:.55}
+.kr{font-size:clamp(17px,2vw,26px);font-weight:800;letter-spacing:-.042em;line-height:1.4;letter-spacing:-.032em;margin-top:26px;max-width:22em}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:38px;
+  width:100vw;margin-left:calc(50% - 50vw);border-top:2px solid var(--ink);background:var(--ink)}
+.s2 .grid{border-color:var(--paper);background:var(--paper)}
+.cell{background:var(--ink);color:var(--paper);padding:24px 24px 28px;min-height:236px;
+  display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden;
+  transition:background .5s cubic-bezier(.16,1,.3,1),color .5s cubic-bezier(.16,1,.3,1)}
+.cell.hot{background:var(--red);color:#fff}
+.s2 .cell{background:var(--red);color:#fff}
+.s2 .cell.hot{background:var(--paper);color:var(--ink)}
+.cell .n{font-family:Archivo,sans-serif;font-size:10.5px;font-weight:600;letter-spacing:.16em;opacity:.55}
+.cell .big{font-family:Archivo,sans-serif;font-size:82px;font-weight:800;line-height:1;
+  letter-spacing:-.05em;opacity:.12;position:absolute;right:16px;bottom:2px}
+.cell .t{font-size:clamp(26px,3.1vw,42px);font-weight:800;letter-spacing:-.045em;line-height:1}
+.cell .d{font-size:12.5px;opacity:.7;margin-top:9px}
+.cell .t,.cell .d,.cell .n,.cell .big{transition:transform .55s cubic-bezier(.16,1,.3,1),opacity .5s}
+.cell.hot .big{opacity:.2;transform:translateY(-4px)}
+.cell.hot .t{transform:translateX(4px)}
+.rv{display:block;overflow:hidden;padding-bottom:.04em}
+.rv>span{display:block;transform:translateY(108%);transition:transform 1.05s cubic-bezier(.16,1,.3,1)}
+.on .rv>span{transform:translateY(0)}
+.rv:nth-of-type(2)>span{transition-delay:.09s}
+.fade{opacity:0;transform:translateY(16px);transition:opacity .9s ease,transform .9s cubic-bezier(.16,1,.3,1)}
+.on .fade{opacity:1;transform:none}
+.on .d1{transition-delay:.22s}.on .d2{transition-delay:.32s}.on .d3{transition-delay:.42s}
+@media(prefers-reduced-motion:reduce){.rv>span,.fade{transition:none!important;transform:none!important;opacity:1!important}}
+
+.s-dark{background:var(--ink);color:var(--paper)}
+.s-dark .top{border-color:var(--paper)}
+.sec-h{font-family:Archivo,sans-serif;font-weight:800;font-size:clamp(38px,7.4vw,110px);
+  line-height:.9;letter-spacing:-.05em;text-transform:uppercase;margin-top:30px}
+.sec-h u{text-decoration:none;color:var(--red)}
+.sec-k{font-size:clamp(17px,2vw,26px);font-weight:800;line-height:1.35;letter-spacing:-.042em;margin-top:22px;max-width:24em}
+.sec-s{font-size:14.5px;line-height:1.8;margin-top:16px;max-width:34em;opacity:.62}
+.shelf{display:grid;grid-template-columns:repeat(6,1fr);gap:2px;margin-top:38px;
+  width:100vw;margin-left:calc(50% - 50vw);background:var(--ink);border-top:2px solid var(--ink)}
+.s-dark .shelf{background:var(--paper);border-color:var(--paper)}
+.shelf i{background:var(--paper);min-height:112px;display:block;font-style:normal}
+.s-dark .shelf i{background:var(--ink)}
+.shelf i.mine{background:var(--red);color:#fff;display:flex;align-items:center;justify-content:center;
+  font-family:Archivo,sans-serif;font-size:12px;font-weight:700;letter-spacing:.08em;text-align:center;padding:8px}
+.list{margin-top:38px;width:100vw;margin-left:calc(50% - 50vw);border-top:2px solid var(--ink)}
+.s-dark .list{border-color:var(--paper)}
+.list a{display:grid;grid-template-columns:88px 1fr auto;gap:24px;align-items:baseline;
+  padding:22px 44px;border-bottom:1px solid rgba(12,12,11,.16);text-decoration:none;color:inherit;
+  transition:background .4s cubic-bezier(.16,1,.3,1),color .4s,padding-left .4s}
+.s-dark .list a{border-color:rgba(237,235,230,.18)}
+.list a:hover{background:var(--red);color:#fff;padding-left:56px}
+.list b{font-family:Archivo,sans-serif;font-size:12px;font-weight:700;letter-spacing:.14em;opacity:.5}
+.list h3{font-size:clamp(20px,2.4vw,31px);font-weight:800;letter-spacing:-.045em}
+.list span{font-size:13px;opacity:.62;text-align:right}
+.cmap{margin-top:26px;width:100vw;margin-left:calc(50% - 50vw);padding:0 44px}
+.cmap svg{width:100%;height:auto;display:block;max-width:900px;margin:0 auto}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:2px;margin-top:38px;
+  width:100vw;margin-left:calc(50% - 50vw);background:var(--ink);border-top:2px solid var(--ink)}
+.s-dark .steps{background:var(--paper);border-color:var(--paper)}
+.steps div{background:var(--paper);padding:26px 20px 30px;min-height:180px;display:flex;flex-direction:column}
+.s-dark .steps div{background:var(--ink)}
+.steps em{font-style:normal;font-family:Archivo,sans-serif;font-size:56px;font-weight:800;
+  line-height:1;letter-spacing:-.05em;color:var(--red)}
+.steps h3{font-size:16.5px;font-weight:800;letter-spacing:-.03em;margin-top:auto;letter-spacing:-.02em}
+.steps p{font-size:12px;opacity:.6;margin-top:7px;line-height:1.6}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:38px;
+  width:100vw;margin-left:calc(50% - 50vw);background:var(--ink);border-top:2px solid var(--ink)}
+.s-dark .duo{background:var(--paper);border-color:var(--paper)}
+.duo div{background:var(--paper);padding:40px 40px 46px}
+.s-dark .duo div{background:var(--ink)}
+.duo div:last-child{background:var(--red);color:#fff}
+.duo b{font-family:Archivo,sans-serif;font-size:11px;font-weight:700;letter-spacing:.16em;opacity:.55}
+.duo h3{font-size:clamp(24px,3vw,39px);font-weight:800;letter-spacing:-.045em;margin-top:14px;letter-spacing:-.04em}
+.duo p{font-size:13.5px;line-height:1.8;margin-top:14px;opacity:.72}
+.cta{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:36px;
+  width:100vw;margin-left:calc(50% - 50vw);background:var(--paper)}
+.cta div{background:var(--ink);padding:24px 26px 28px}
+.cta b{display:block;font-family:Archivo,sans-serif;font-size:10px;font-weight:700;
+  letter-spacing:.18em;opacity:.5;margin-bottom:10px}
+.cta span{font-size:16px;font-weight:600;letter-spacing:-.01em}
+.cta .ph{opacity:.45}
+footer{padding:24px 44px 30px;font-family:Archivo,sans-serif;font-size:10.5px;font-weight:600;
+  letter-spacing:.14em;text-transform:uppercase;opacity:.45;display:flex;justify-content:space-between;
+  width:100vw;margin-left:calc(50% - 50vw)}
+@media(max-width:900px){.shelf{grid-template-columns:repeat(3,1fr)}.steps,.cta{grid-template-columns:1fr 1fr}
+  .duo{grid-template-columns:1fr}.list a{grid-template-columns:56px 1fr;padding:18px 22px}
+  .list span{display:none}footer{padding:20px 22px 26px;flex-direction:column;gap:6px}}
+
+@media(max-width:900px){
+  section{min-height:auto;padding:24px 0 0}
+  .in{flex:none;display:block;padding:0 20px}
+  .top{font-size:9.5px;padding-bottom:10px}.top em{padding:4px 8px}
+  .ident{padding-top:14px;gap:10px}.ident b{font-size:18px}.ident span{font-size:11.5px}
+  .row{grid-template-columns:1fr;gap:16px;margin-top:20px}
+  h1{font-size:clamp(30px,8.6vw,40px);line-height:.94;letter-spacing:-.05em}
+  h1 u,.sec-h u{display:block}
+  .sec-h{font-size:clamp(28px,8vw,38px);line-height:.96;margin-top:22px}
+  .top{flex-wrap:wrap;gap:6px}.top span{font-size:9px}
+  .top em{font-size:9px;padding:3px 7px}
+  .note{text-align:left;font-size:10.5px;line-height:1.9}
+  .kr,.sec-k{font-size:17px;margin-top:16px;line-height:1.45}
+  .sec-s{font-size:13px;margin-top:12px}
+  .grid,.shelf,.steps,.duo,.cta{grid-template-columns:1fr;margin-top:24px}
+  .shelf{grid-template-columns:repeat(3,1fr)}
+  .shelf i{min-height:74px}
+  .cell{min-height:auto;padding:18px 20px 22px;gap:26px}
+  .cell .big{font-size:56px}
+  .steps div{padding:18px 20px 20px;min-height:auto;flex-direction:row;align-items:baseline;gap:14px}
+  .steps em{font-size:30px}.steps h3{margin-top:0}
+  .steps div>div{flex:1}
+  .duo div{padding:24px 20px 28px}
+  .cmap{padding:0 20px;margin-top:20px}
+  .list a{padding:16px 20px;grid-template-columns:44px 1fr}
+  .cta div{padding:18px 20px 20px}
+  footer{padding:20px 20px 26px;flex-direction:column;gap:6px}}
+</style></head><body>
+
+<!-- ═══ 1막 ═══ -->
+<section class="s1"><div class="grain"></div><div class="in">
+  <div class="top"><span>KPM — U.S. Market Entry</span><em>Southeast USA</em></div>
+  <div class="ident"><b>KPM</b><span>한국 브랜드의 미국 진출 — 비용 · 법률 · 인사를 한 번에</span></div>
+  <div class="row">
+    <h1><span class="rv"><span>Three</span></span><span class="rv"><span>locked <u>doors.</u></span></span></h1>
+    <div class="note fade d2">Cost<br>Legal<br>People<br><span style="opacity:.4">— all sealed</span></div>
+  </div>
+  <p class="kr fade d1">미국은 문이 세 개입니다.<br>삼성도, 한화도 직접 들어가기를 포기했습니다.</p>
+</div>
+<div class="grid fade d3">
+  <div class="cell"><span class="n">01 / COST</span><span class="big">01</span>
+    <div><div class="t">비용</div><div class="d">부동산 · 인허가</div></div></div>
+  <div class="cell"><span class="n">02 / LEGAL</span><span class="big">02</span>
+    <div><div class="t">법률</div><div class="d">허가를 풀어줄 사람</div></div></div>
+  <div class="cell hot"><span class="n">03 / PEOPLE</span><span class="big">03</span>
+    <div><div class="t">인사</div><div class="d">고용 · 노동 소송</div></div></div>
+</div></section>
+
+<!-- ═══ 2막 ═══ -->
+<section class="s2"><div class="grain"></div><div class="in">
+  <div class="top"><span>KPM — One Contract</span><em>Unlocked</em></div>
+  <div class="row">
+    <h1><span class="rv"><span>One</span></span><span class="rv"><span><u>contract.</u></span></span></h1>
+    <div class="note fade d2">Cost<br>Legal<br>People<br><span style="opacity:.4">— all cleared</span></div>
+  </div>
+  <p class="kr fade d1">비용 · 법률 · 인사를 하나의 계약으로 흡수합니다.<br>대표님은 브랜드에만 집중하시면 됩니다.</p>
+</div>
+<div class="grid fade d3">
+  <div class="cell"><span class="n">01 / COST</span><span class="big">01</span>
+    <div><div class="t">부동산</div><div class="d">취득 · 인허가 대행</div></div></div>
+  <div class="cell"><span class="n">02 / LEGAL</span><span class="big">02</span>
+    <div><div class="t">법무</div><div class="d">현지 제도 대응</div></div></div>
+  <div class="cell"><span class="n">03 / PEOPLE</span><span class="big">03</span>
+    <div><div class="t">스태핑</div><div class="d">채용 · 비자 · 노무</div></div></div>
+</div></section>
+
+
+<!-- ═══ 3막 · 비어 있는 매대 ═══ -->
+<section class="s3"><div class="grain"></div><div class="in">
+  <div class="top"><span>KPM — Shelf Space</span><em>Reserved</em></div>
+  <h2 class="sec-h"><span class="rv"><span>The shelf is</span></span><span class="rv"><span><u>already yours.</u></span></span></h2>
+  <p class="sec-k fade d1">들어갈 자리는 이미 있습니다.</p>
+  <p class="sec-s fade d1">미국 대형 한인 유통 채널의 매대를 확보하고 있습니다. 진출을 검토하는 것이 아니라, 입점이 정해진 상태에서 시작합니다.</p>
+</div>
+<div class="shelf fade d3">
+  <i></i><i></i><i class="mine">YOUR<br>BRAND</i><i></i><i></i><i></i>
+  <i></i><i class="mine">YOUR<br>BRAND</i><i></i><i></i><i></i><i></i>
+</div></section>
+
+<!-- ═══ 4막 · 동남부 ═══ -->
+<section class="s4 s-dark"><div class="grain"></div><div class="in">
+  <div class="top"><span>KPM — Site Plan</span><em>Southeast</em></div>
+  <h2 class="sec-h"><span class="rv"><span>Miami.</span></span><span class="rv"><span>Orlando. <u>Georgia.</u></span></span></h2>
+  <p class="sec-k fade d1">미국의 중심축이 동남부로 옮겨갑니다.</p>
+  <p class="sec-s fade d1">세제 혜택, 인구 유입, 낮은 사업 비용. 자본과 인재가 뉴욕·캘리포니아를 떠나 플로리다와 조지아로 향하고 있습니다.</p>
+</div>
+<div class="cmap fade d2"><svg viewBox="0 0 900 340" role="img" aria-label="미국 동남부 조지아와 플로리다 지도에 세 거점이 표시되어 있다">
+ <g transform="translate(300,10)">
+  <path d="M80 12 L212 16 L226 72 L216 118 L122 126 L94 88 L78 46 Z" fill="#EDEBE6" opacity=".14"
+    stroke="#EDEBE6" stroke-width="2.4" stroke-linejoin="round"/>
+  <path d="M30 152 L122 140 L216 118 L228 148 L240 198 L250 248 L248 294 L234 328 L214 320
+           L208 264 L190 214 L150 184 L96 178 L32 174 Z" fill="#EDEBE6" opacity=".14"
+    stroke="#EDEBE6" stroke-width="2.4" stroke-linejoin="round"/>
+  <g><circle cx="142" cy="64" r="10" fill="#FF3B14"/>
+    <line x1="142" y1="64" x2="66" y2="26" stroke="#FF3B14" stroke-width="1.6"/>
+    <text x="58" y="20" text-anchor="end" fill="#FF3B14" font-family="Archivo,sans-serif"
+      font-size="21" font-weight="800" letter-spacing="-.5">GEORGIA</text>
+    <text x="58" y="38" text-anchor="end" fill="#EDEBE6" opacity=".55" font-family="Archivo,sans-serif"
+      font-size="10.5" font-weight="600" letter-spacing="2">01 · ATLANTA</text></g>
+  <g><circle cx="224" cy="218" r="10" fill="#FF3B14"/>
+    <line x1="224" y1="218" x2="318" y2="186" stroke="#FF3B14" stroke-width="1.6"/>
+    <text x="328" y="182" fill="#FF3B14" font-family="Archivo,sans-serif"
+      font-size="21" font-weight="800" letter-spacing="-.5">ORLANDO</text>
+    <text x="328" y="200" fill="#EDEBE6" opacity=".55" font-family="Archivo,sans-serif"
+      font-size="10.5" font-weight="600" letter-spacing="2">02</text></g>
+  <g><circle cx="240" cy="302" r="10" fill="#FF3B14"/>
+    <line x1="240" y1="302" x2="326" y2="318" stroke="#FF3B14" stroke-width="1.6"/>
+    <text x="336" y="314" fill="#FF3B14" font-family="Archivo,sans-serif"
+      font-size="21" font-weight="800" letter-spacing="-.5">MIAMI</text>
+    <text x="336" y="332" fill="#EDEBE6" opacity=".55" font-family="Archivo,sans-serif"
+      font-size="10.5" font-weight="600" letter-spacing="2">03</text></g>
+ </g>
+</svg></div>
+<div class="steps fade d3">
+  <div><em>01</em><div><h3>마이애미</h3><p>중남미 관문 · 금융 · 라이프스타일 허브</p></div></div>
+  <div><em>02</em><div><h3>올랜도</h3><p>관광 · 소비 중심지</p></div></div>
+  <div><em>03</em><div><h3>조지아</h3><p>물류 · 기업 본사 집결 · 동남부 관문</p></div></div>
+  <div><em>—</em><div><h3>세제 혜택</h3><p>주별 인센티브와 유치 제도</p></div></div>
+  <div><em>—</em><div><h3>낮은 비용</h3><p>서부·동북부 대비 진입 비용</p></div></div>
+</div></section>
+
+<!-- ═══ 사업 6개 라인 ═══ -->
+<section class="s5"><div class="grain"></div><div class="in">
+  <div class="top"><span>KPM — Scope</span><em>6 Lines</em></div>
+  <h2 class="sec-h"><span class="rv"><span>One team.</span></span><span class="rv"><span><u>Every step.</u></span></span></h2>
+  <p class="sec-k fade d1">진출의 모든 단계를 하나의 팀이 책임집니다.</p>
+</div>
+<div class="list fade d2">
+  <a href="#"><b>01</b><h3>미국 스태핑</h3><span>현지 인력 채용 · 비자 · 노무 운영</span></a>
+  <a href="#"><b>02</b><h3>미국 부동산</h3><span>상권 분석 · 임대 · 매입 자산 확보</span></a>
+  <a href="#"><b>03</b><h3>F&amp;B 진출</h3><span>외식 · 식음료 브랜드 현지 안착</span></a>
+  <a href="#"><b>04</b><h3>코스메틱 진출</h3><span>K-뷰티 유통 · 리테일 입점 확대</span></a>
+  <a href="#"><b>05</b><h3>AI 특혜 진출</h3><span>AI 기업 우대 제도 · 인센티브 활용</span></a>
+  <a href="#"><b>06</b><h3>인테리어 · 운영</h3><span>설계 · 시공 · 오픈 후 운영 관리</span></a>
+</div></section>
+
+<!-- ═══ A to Z ═══ -->
+<section class="s6 s-dark"><div class="grain"></div><div class="in">
+  <div class="top"><span>KPM — Process</span><em>A to Z</em></div>
+  <h2 class="sec-h"><span class="rv"><span>A to Z,</span></span><span class="rv"><span><u>one flow.</u></span></span></h2>
+  <p class="sec-k fade d1">진단부터 오픈 이후의 가치까지, 끊기는 구간 없이 이어갑니다.</p>
+</div>
+<div class="steps fade d3">
+  <div><em>A</em><div><h3>진단 · 전략</h3><p>브랜드 분석과 진출 시나리오 설계</p></div></div>
+  <div><em>B</em><div><h3>입지 · 법인</h3><p>상권 선정 · 법인 설립 · 부동산 확보</p></div></div>
+  <div><em>C</em><div><h3>구축 · 인력</h3><p>인테리어 시공과 현지 인력 세팅</p></div></div>
+  <div><em>D</em><div><h3>오픈 · 운영</h3><p>그랜드 오픈과 지속 운영 지원</p></div></div>
+  <div><em>Z</em><div><h3>확장 · 가치</h3><p>매출 성장과 기업가치 재평가</p></div></div>
+</div></section>
+
+<!-- ═══ 두 가지 성과 ═══ -->
+<section class="s7"><div class="grain"></div><div class="in">
+  <div class="top"><span>KPM — Outcome</span><em>Two Results</em></div>
+  <h2 class="sec-h"><span class="rv"><span>Two results.</span></span><span class="rv"><span><u>At once.</u></span></span></h2>
+  <p class="sec-k fade d1">두 개의 성과를 동시에 만듭니다.</p>
+</div>
+<div class="duo fade d3">
+  <div><b>Result 01 — Revenue</b><h3>매출의 우상향</h3>
+    <p>검증된 입지, 현지 운영 인프라, 실수요 기반 상권 안에서 브랜드를 안착시킵니다. 진출이 곧 성장으로 이어지도록 설계합니다.</p></div>
+  <div><b>Result 02 — Valuation</b><h3>기업가치의 재평가</h3>
+    <p>‘미국에 진출한 기업’이라는 사실 하나만으로 국내에서의 기업 평가가 달라집니다. 투자 유치 · 상장 · 브랜드 신뢰도에 직접적인 힘이 됩니다.</p></div>
+</div></section>
+
+<!-- ═══ 문의 ═══ -->
+<section class="s8 s-dark" style="min-height:auto;padding-bottom:0"><div class="in">
+  <div class="top"><span>KPM — Contact</span><em>Let's talk</em></div>
+  <h2 class="sec-h"><span class="rv"><span>Let's</span></span><span class="rv"><span><u>talk.</u></span></span></h2>
+  <p class="sec-k fade d1">미국이라는 무대에 브랜드를 올려드립니다.</p>
+</div>
+<div class="cta fade d3">
+  <div><b>Contact</b><span class="ph">000-0000-0000</span></div>
+  <div><b>E-mail</b><span class="ph">000@000.com</span></div>
+  <div><b>Office</b><span class="ph">서울 000 · Miami 000</span></div>
+  <div><b>Region</b><span>Miami · Orlando · Georgia</span></div>
+</div>
+<footer><span>KPM — U.S. Market Entry</span><span>Miami · Orlando · Georgia</span></footer>
+</section>
+
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on')}),{threshold:.18});
+document.querySelectorAll('section').forEach(s=>io.observe(s));
+document.querySelectorAll('.grid').forEach(g=>{
+  const cs=[...g.querySelectorAll('.cell')];
+  cs.forEach(c=>c.addEventListener('mouseenter',()=>{cs.forEach(x=>x.classList.remove('hot'));c.classList.add('hot')}));
+});
+</script></body></html>
